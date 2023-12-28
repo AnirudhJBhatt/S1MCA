@@ -1,0 +1,57 @@
+<html>
+<style>
+    .center {
+        padding: 70px 0;
+        margin: auto;
+        border: 3px solid blue;
+        text-align: center;
+        width: 500;
+        height: 500;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <form onsubmit="return validate()">
+            Roll No <input type="text" id="rollno"><br><br>
+            Name <input type="text" id="name"><br><br>
+            Department <input type="text" id="dept"><br><br>
+            Semester <input type="number" id="sem"><br><br>
+            Mobile No <input type="text" id="phno"><br><br>
+            Email <input type="text" id="email"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>    
+    <script>
+        function validate() {
+            let rno = document.getElementById('rollno').value;
+            let name = document.getElementById('name').value;
+            let phno = document.getElementById('phno').value;
+            let sem = document.getElementById('sem').value;
+            let email = document.getElementById('email').value;
+
+            if (rno == "") {
+                alert("Roll shouldn't be empty");
+                return false;
+            }
+            else if (name = "") {
+                alert("Name shouldn't be empty");
+                return false;
+            }
+            else if (phno.length != 10) {
+                alert("Phone No");
+                return false;
+            }
+            else if (!email.includes("@")) {
+                alert("Not a valid mail id");
+                return false;
+            }
+            else if (Number.isNaN(phno) || phno.length!=10) {
+                alert("Not a valid mob no");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

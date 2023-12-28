@@ -1,0 +1,7 @@
+div.static {
+  position: static;
+}
+div.relative {
+  position: relative;
+  left: 30px;
+}

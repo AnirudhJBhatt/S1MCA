@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style_rel.css">
+    <link rel="stylesheet" href="style_abs.css">
+    <title>Relative Position Example</title>
+</head>
+<body>
+    <div class="header">
+        <h1 style="color: red;">Muthoot Institute of Technology</h1>
+        <p class="absolute" style="color: red;">A premier engineering college in the state, located at Kochi</p>
+    </div>
+
+    <div class="topnav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+        <a href="#">Departments</a>
+        <a href="#">Campus</a>
+        <a href="#">Placements</a>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <h2>About MITS</h2>
+            <p>
+                Muthoot Institute of Technology and Science (MITS) is promoted by Muthoot M. George Institute of
+                Technology, a Section 25 Company within the Muthoot Group. MITS is a self financing technical
+                institution offering postgraduate and undergraduate engineering programmes, situated in the industrial
+                suburb of Kochi, close to the Smart City and Info Park, approximately 15 kms from Vytilla Junction
+                towards Muvattupuzha on the Cochin Madurai National Highway.
+            </p>
+            <p>
+                The promoters with their commanding presence in the domains of Financial Services, Hospitality,
+                Healthcare, Renewable Energy and Information Technology, are committed to building MITS as a centre of
+                excellence, focusing purely on merit. This “temple of learning” will provide to the students,
+                state-of-the-art infrastructure, highly qualified and proficient teachers from various faculty of
+                engineering and allied streams, embedded in a conducive environment where focus will be on their
+                harmonious development.
+            </p>
+        </div>
+        <div class="card">
+            <h2>Vision</h2>
+            <p class="relative">
+                To be a centre of excellence for learning and research in engineering and technology, producing
+                intellectually well-equipped and socially committed citizens possessing an ethical value system.
+            </p>
+            <h2>Mission</h2>
+            <ul>
+                <li>Offer well-balanced programme of instruction, practical exercise and opportunities in technology.
+                </li>
+                <li>Foster innovation and ideation of technological solutions on sustainable basis.</li>
+                <li>Nurture a value system in students and engender in them a spirit of inquiry.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>About Muthoot Group</h2>
+            <p>
+                The Muthoot Group, with a reputation that has been shaped over decades with high quality practices,
+                total
+                customer satisfaction and steady growth, spanning 130 years in the field of business, is a legacy built
+                on God-given values of trust, truth, transparency and tradition and has become one of the top business
+                houses today by the grace of God.
+            </p>
+
+            <p>
+                Muthoot takes its name from its Family, which is a branch of a traditional Orthodox Christian family,
+                based in Kozhencherry, a small town in the erstwhile primary state of Travancore (Kerala). In the year
+                1887, Muthoot Ninan Mathai (Patron Founder of the group), started in a humble way as a retail and
+                whole-sale trader of grains at Kozhencherry. The family partition took place in the year 1979 which led
+                to the Genesis of Muthoot George Group (MGG). Over the years business grew gradually into gold loans and
+                chits during 1950’s and expanded into Financial Services, Information Technology, Media, Healthcare,
+                Education, Power Generation, Infrastructure, Plantations, Precious metal, Tourism, and Hospitality
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+style_rel.css
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
+    font-family: cursive;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: red;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.topnav a:hover {
+    background-color: white;
+    color: black;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.relative {
+    position: relative;
+}
+
+style_abs.css
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+
+.absolute {
+    position: absolute;
+}

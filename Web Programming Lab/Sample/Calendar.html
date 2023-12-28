@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </style>
+</head>
+
+<body style="background-color: antiquewhite;">
+    <div class="container my-5">
+        <div class="row">
+            <div class="col">
+                <label>Enter a year : </label>
+                <input type="number" id="year_get" class="form-control">
+            </div>
+            <div class="col">
+                <label>Enter the month(1-12) : </label>
+                <input type="number" id="month_get" class="form-control">
+            </div>
+        </div>
+        <div class="row text-center my-3">
+            <div class="col">
+                <input type="submit" class="btn btn-success" value="Submit"  onclick="generate()">
+            </div>
+        </div>
+        <div id="content"></div>
+    </div>
+</body>
+<script>
+    function generate() {
+        var init_content = "<table BORDER=1 id='calender' class='table table-striped'><tr><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr><tr>"
+        var year_get = document.getElementById("year_get").value;
+        var month_get = document.getElementById("month_get").value;
+        month_get -= 1;
+
+        var date = new Date(year_get, month_get);
+        var day = date.getDay();
+        for (var i = 0; i < day; i++) {
+            init_content += "<td></td>";
+        }
+        while (date.getMonth() == month_get) {
+            init_content += "<td>" + date.getDate() + "</td>";
+            if (date.getDay()%7 == 6) {
+                init_content += "</tr><tr>";
+            }
+            date.setDate(date.getDate() + 1);
+        }
+
+        while (date.getDay() % 7 != 6 && date.getDay() % 7 != 0) {
+            init_content += "<td></td>";
+            date.setDate(date.getDate() + 1);
+        }
+
+        if (date.getDay() % 7 > 0) {
+            init_content += "<td></td></tr>";
+        }
+
+        init_content += "</table>"
+        document.getElementById("content").innerHTML = init_content;
+    }
+</script>
+
+</html> 

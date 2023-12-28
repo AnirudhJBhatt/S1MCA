@@ -1,0 +1,25 @@
+p {
+    text-align: justify;
+}
+
+table {
+    text-align: center; 
+    font-size: x-large;
+}
+
+td {
+    width: auto;
+}
+
+h3 {
+    margin-top: 3%;
+}
+
+h5 {
+    font-family: cursive;
+    font-weight: bold;
+}
+body{
+    background-color: aquamarine; 
+    font-size: x-large;
+}

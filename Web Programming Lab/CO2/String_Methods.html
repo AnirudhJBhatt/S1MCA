@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>String and Math Functions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .table,
+        tr,
+        td {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        h3{
+            font-weight: bold;
+            color: red;
+        }
+        body {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-3">
+        <h3 class="heading text-center">String Function's</h3>
+        <div class="row">
+            <div class="col">                
+                Enter a text : <input type="text" class="form-control" id="str">
+                Search : <input type="text" class="form-control" id="search_str">
+                Slice(Start, End) : <input type="text" class="form-control" id="slice_str">
+                Substring(Start, End) : <input type="text" class="form-control" id="substring_str">
+                Substr(Start, Length) : <input type="text" class="form-control" id="sub_str">
+                Replace(Value, Newvalue) : <input type="text" class="form-control" id="rep_str">
+                Concat : <input type="text" class="form-control" id="con_str">
+            </div>
+        </div>
+        <div class="row mt-3 text-center">
+            <div class="col">
+                <input type="submit" class="btn btn-success" value="Submit" onclick="string_methods()">
+            </div>
+        </div>
+        <table class="table table-striped table-info table-bordered my-3" id="result_1"></table>
+    </div>
+    <script>
+        function string_methods() {
+            let str = document.getElementById('str').value;
+            let search = document.getElementById('search_str').value;
+            let slice = document.getElementById('slice_str').value;
+            let a = parseInt(slice[0]); let b = parseInt(slice[2]);
+            let substring = document.getElementById('substring_str').value;
+            let p = parseInt(substring[0]); let q = parseInt(substring[2]);
+            let substr = document.getElementById('sub_str').value;
+            let x = parseInt(substr[0]); let y = parseInt(substr[2]);
+            let rep = document.getElementById('rep_str').value;
+            let val = rep[0]; 
+            let new_val = rep[2];
+            let con = document.getElementById('con_str').value;
+                
+            let table_h = '<tr><th>String Function</th><th>Result</th></tr>';
+            let result;
+            result = table_h + '<tr><td>' + 'Length : </td><td>' + str.length + '</td><tr>';
+            result += '<tr><td>' + 'Search : </td><td>' + str.search(search) + '</td><tr>';
+            result += '<tr><td>' + 'Slice : </td><td>' + str.slice(a, b) + '</td><tr>';
+            result += '<tr><td>' + 'Substring : </td><td>' + str.substring(p, q) + '</td><tr>';
+            result += '<tr><td>' + 'Substr : </td><td>' + str.substr(x, y) + '</td><tr>';
+            result += '<tr><td>' + 'Replace : </td><td>' + str.replace(val, new_val) + '</td><tr>';
+            result += '<tr><td>' + 'Concat   : </td><td>' + str.concat(" ", con) + '</td><tr>';
+            result += '<tr><td>' + 'To Upper : </td><td>' + str.toLowerCase() + '</td><tr>';
+            result += '<tr><td>' + 'To Lower : </td><td>' + str.toUpperCase() + '</td><tr>';
+
+            document.getElementById('result_1').innerHTML = (result);
+        }
+    </script>
+</body>
+</html>

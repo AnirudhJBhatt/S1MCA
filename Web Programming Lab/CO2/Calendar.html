@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>Calendar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        table {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body style="background-color: antiquewhite;">
+    <div class="container border mt-3" style="background-color: cornsilk;">
+        <h3 class="heading text-center mt-3">CALENDAR</h3>
+        <div class="my-3 row align-items-center justify-content-center">
+            <label class="col-sm-2 text-end">Enter the year :</label>
+            <div class="col-sm-2">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="year">
+                    <input type="submit" class="btn btn-primary" onclick="calendar()">
+                </div> 
+            </div>
+          </div>
+        <div class="footer text-center mt-3 mb-2">
+            <button class="btn btn-primary" onclick="previousMonth()"> < </button>
+            <input type="Reset" class="btn btn-primary" onclick="location.reload()">
+            <button class="btn btn-primary" onclick="nextMonth()"> > </button>
+        </div>
+        <div class="container mt-3" id="Calendar"></div>
+    </div>
+    <script>
+        let mon = 0;
+
+        function calendar() {
+            let year = document.getElementById('year').value;
+            let calendar = '';
+
+            let date = new Date(year, mon);
+            calendar += '<h2 class="text-center">' + date.toLocaleString('default', { year: 'numeric', month: 'long' }) + '</h2>';
+            calendar += generatecalendar(date);
+
+            document.getElementById('Calendar').innerHTML = calendar;
+        }
+
+        function generatecalendar(d) {
+            let cal = '<table class="table table-light table-bordered text-center"><tr class="table-dark"><th>SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr><tr>';
+            let m = d.getMonth();
+            for (let i = 0; i < d.getDay(); i++) {
+                cal += '<td></td>';
+            }
+
+            while (d.getMonth() == m) {
+                cal += '<td>' + d.getDate() + '</td>';
+                if (d.getDay() % 7 == 6) {
+                    cal += '</tr><tr>';
+                }
+                d.setDate(d.getDate() + 1);
+            }
+
+            if (d.getDay() != 0) {
+                for (let i = d.getDay(); i < 7; i++) {
+                    cal += '<td></td>';
+                }
+            }
+            cal += '</tr></table>';
+            return cal;
+        }
+
+        function nextMonth() {
+            mon++;
+            calendar();
+        }
+
+        function previousMonth() {
+            mon--;
+            calendar();
+        }
+    </script>
+</body>
+
+</html>

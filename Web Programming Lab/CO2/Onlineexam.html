@@ -1,0 +1,167 @@
+<html>
+<head>
+    <title>Online Examination using Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        li {
+            margin-top: 25px;
+        }
+        body {
+            background-color: azure;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            gap: 10px;
+        }
+        *{
+            margin: 0;
+            font-family: cursive;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-3 border border-3" style="max-width:50%; background-color: antiquewhite;" id="result">
+        <div class="header text-center mt-3">
+            <h3>WEB PROGRAMMING LAB EXAMINATION</h3>
+            <p>Attempt all questions. Each Question carries 1 mark.</p>
+            <div class="d-flex justify-content-sm-between"><p>Time : 5mins</p><p>Max Marks : 5</p></div>
+        </div>        
+        <hr>
+        <ol>
+            <li>
+                <label>What is the full form of HTML ?</label>
+                <div class="grid">
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q1" value="true">
+                        <label class="form-check-label">A. Hyper Text Markup Language</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q1" value="false">
+                        <label class="form-check-label">B. Hyper Text Makeup Language</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q1" value="false">
+                        <label class="form-check-label">C. Hyper Test Markup Language</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q1" value="false">
+                        <label class="form-check-label">D. Hyper Test Makeup Language</label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <label>CSS stands for ?</label>
+                <div class="grid">
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q5" value="true">
+                        <label class="form-check-label">A. Cascading Style Sheets</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q5" value="false">
+                        <label class="form-check-label">B. Color and Style Sheets</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q5" value="false">
+                        <label class="form-check-label">C. Cascade style sheets<label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q5" value="false">
+                        <label class="form-check-label">D. None of the above</label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <label>Javascript is a __________ language</label>
+                <div class="grid">
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q2" value="true">
+                        <label class="form-check-label">A. Object-Oriented</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q2" value="false">
+                        <label class="form-check-label">B. Object-Based</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q2" value="false">
+                        <label class="form-check-label">C. Assembly-language</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q2" value="false">
+                        <label class="form-check-label">D. High-level</label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <label>Which server is used to run PHP ?</label>
+                <div class="grid">
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q3" value="false">
+                        <label class="form-check-label">A. XAMMP</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q3" value="false">
+                        <label class="form-check-label">B. WAMP</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q3" value="false">
+                        <label class="form-check-label">C. LAMP</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q3" value="true">
+                        <label class="form-check-label">D. All of the above</label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <label>MySQL stands for</label>
+                <div class="grid">
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q4" value="false">
+                        <label class="form-check-label">A. My Structured Query List</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q4" value="true">
+                        <label class="form-check-label">B. My Structure Query Language</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q4" value="false">
+                        <label class="form-check-label">C. Sample Query Language</label>
+                    </div>
+                    <div class="form-check mt-3">
+                        <input type="radio" class="form-check-input" name="Q4" value="false">
+                        <label class="form-check-label">D. None of the above</label>
+                    </div>
+                </div>
+            </li>           
+        </ol>
+        <div class="footer my-3 text-center">
+            <input type="submit" class="btn btn-success" value="Submit" onclick="validate()">
+            <input type="submit" class="btn btn-success" value="Reset" onclick="window.location.reload()">
+        </div>
+    </div>
+    <script>
+        function validate() {
+            let s = 0;
+            var A = document.querySelector('input[name="Q1"]:checked');
+            var B = document.querySelector('input[name="Q2"]:checked');
+            var C = document.querySelector('input[name="Q3"]:checked');
+            var D = document.querySelector('input[name="Q4"]:checked');
+            var E = document.querySelector('input[name="Q5"]:checked');
+            const ans = new Array(A, B, C, D, E);
+            for (var i = 0; i < 5; i++) {
+                if (ans[i].value == 'true') {
+                    s++;
+                }
+            }
+            document.getElementById('result').innerHTML = "<div class='alert alert-success mt-3'>You've scored " + s + " out of 5 </div>";
+        }
+    </script>
+</body>
+</html>
