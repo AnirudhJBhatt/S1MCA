@@ -25,7 +25,7 @@
         <p style="color: red;">A premier engineering college in the state, located at Kochi</p>
     </div>
     <div class="d-flex justify-content-center mt-3">
-        <div class="container border w-50" style="background-color: antiquewhite;";>
+        <div class="container border border-dark w-50" style="background-color: antiquewhite;";>
             <form action="" method="POST">
                 <div class="text-center mt-2">
                     <h3>BOOK ENTRY/SEARCH FORM</h3>
@@ -99,7 +99,7 @@
         $row=mysqli_fetch_array($run);
 
         echo "<div class='container d-flex justify-content-center mt-3'>
-                <table class='table table-striped table-hover table-bordered'>
+                <table class='table table-striped table-hover table-bordered border-dark'>
                     <tr>
                         <th>Book ID</th>
                         <th>Book Title</th>
